@@ -1,48 +1,45 @@
 <!DOCTYPE <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+
 </head>
+
 <body>
-  <header>
+  <header role="banner">
     <h2>Reddit Word Cloud</h2>
   </header>
-  <main>
-      <div class = "description container card">
-        <p>Welcome, choose a topic to see what people are talking about on Reddit!</p>
-        <button>Show me more!</button>
-        <form action="#" class="js-search-form">
-            <label for="query"></label>
-            <input type="text" placeholder="Search a topic... e.g. pizza" class="js-query" id="query">
-            <button class = "button" type="submit">Search</button>
-          </form>
-      </div>
-      <a href="https://www.reddit.com"><img src = "https://www.redditstatic.com/icon.png"></a>
-      <div id = "mySVG" class = 'svg-container'></div>
-        <!--<h1>What are people talking about on Reddit?</h1>
-        <a href="https://www.reddit.com"><img src = "https://www.redditstatic.com/icon.png"></a>
-        <form action="#" class="js-search-form">
-          <label for="query"></label>
-          <input type="text" placeholder="Search a topic..." class="js-query" id="query">
-          <button class = "button" type="submit">Search</button>
-        </form>
-        <h2>Find out from these buzzwords...</h2>
-        <div class="search-results" aria-live="assertive"></div>-->
+  <main role="main" aria-live="assertive">
+    <div class="description container card">
+      <p>Welcome, choose a topic to see what people are talking about on Reddit!</p>
+      <p>Once you've searched a topic you can click on a word within the word cloud to search that term or just search again!</p>
+      <button>Show me more!</button>
+      <form action="#" class="js-search-form" autocomplete="off">
+        <label for="query"></label>
+        <input type="text" placeholder="Search a topic... e.g. pizza" class="js-query" id="query">
+        <button class="button" type="submit">Search</button>
+      </form>
+    </div>
+      <img src="https://www.redditstatic.com/icon.png">
+    <div id="mySVG" class='svg-container'></div>
   </main>
-        <footer>
-          <h2>Click on the icon to go to Reddit</h2>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/reddit.js@0.1.4/reddit.min.js"></script>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
-        <script src="./d3.layout.cloud.js"></script>
-        <script src="main.js"></script>
-        <script src = "./easy-word-cloud.js"></script>
+  <footer role="contentinfo">
+    <a href="https://www.reddit.com" style="text-decoration: none">
+      <h2>Click here to go to Reddit</h2>
+    </a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/reddit.js@0.1.4/reddit.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+  <script src="./d3.layout.cloud.js"></script>
+  <script src="main.js"></script>
+  <script src="./easy-word-cloud.js"></script>
 
-  </body>
+</body>
+
 </html>

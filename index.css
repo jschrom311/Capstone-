@@ -2,7 +2,6 @@ body {
     margin: 0 auto;
     font-size: 18px;
     font-family: 'Helvetica';
-    /*padding: 10px 10px 10px;*/
 }
 
 h1 {
@@ -19,24 +18,24 @@ header {
     text-align: center;
     padding: 5px;
     border-bottom: 1px solid black;
-    
 }
 
 img {
-  position: absolute;
-   top: 0;
-   left: 0;
-   height: 230px
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 230px
 }
 
 img:hover {
     transform: scaleX(-1);
 }
 
-@keyframes NAME-YOUR-ANIMATION { 
-    100% { transform: rotate(360); } 
+@keyframes NAME-YOUR-ANIMATION {
+    100% {
+        transform: rotate(360);
+    }
 }
-
 
 .searching.description.card.container {
     margin: 0 auto;
@@ -45,13 +44,13 @@ img:hover {
 
 button {
     font-size: 1.5rem;
-    -webkit-transition-duration: 0.4s; 
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
 button:hover {
     transition: all 0.3s ease;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .test {
@@ -67,7 +66,7 @@ button:hover {
 }
 
 .description {
-    width: 50%;
+    width: 70%;
     margin: auto;
     display: block;
     justify-content: center;
@@ -75,9 +74,35 @@ button:hover {
     margin-top: 20vh;
     text-align: center;
     transition: all .5s;
+    font-size: 24px;
 }
 
-.description:hover ~ a img {
+#mySVG {
+    margin-bottom: 100px;
+}
+
+.loading {
+    font-size: 60px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+}
+
+.js-query {
+    display: block;
+    margin: 20px auto;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.description:hover~a img {
     transform: scaleX(-1);
 }
 
@@ -85,7 +110,8 @@ button:hover {
     transform: scaleX(-1);
 }
 
-.flip p, .flip button:not(.button) {
+.flip p,
+.flip button:not(.button) {
     opacity: 0;
     display: none;
 }
@@ -98,15 +124,13 @@ form {
 .flip form {
     opacity: 1;
 }
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-    padding: 3rem 3rem 3rem 3rem;
-}
 
-.card:hover {
-    //box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    max-width: 700px;
+    padding: 3rem 3rem 3rem 3rem;
+    background-color: #C9E3FA;
 }
 
 .container {
@@ -118,20 +142,9 @@ svg {
     height: 100%;
 }
 
-
-@media screen and (min-width: 480px) {
-  img {
-  }
-}
-
-@media screen and (min-width: 720px) {
-   img {
-   }
-}
-
 body * {
     box-sizing: border-box;
-  }
+}
 
 footer {
     position: fixed;
@@ -139,7 +152,7 @@ footer {
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #efefef;
+    background-color: #C9E3FA;
     text-align: center;
     font-size: 15px;
 }
@@ -148,11 +161,13 @@ footer {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* aspect ratio */
+    padding-bottom: 100%;
+    /* aspect ratio */
     vertical-align: top;
     overflow: hidden;
     text-align: center;
 }
+
 .svg-content-responsive {
     display: inline-block;
     position: absolute;
@@ -160,4 +175,70 @@ footer {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+@media screen and (max-width: 650px) {
+    img {
+        height: 175px;
+    }
+    .description.card.container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    img {
+        height: 135px;
+    }
+    .description.card.container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    img {
+        height: 110px;
+    }
+    .description.card.container {
+        padding: 2.0rem;
+    }
+    .button {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    img {
+        height: 100px;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    .js-query {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    img {
+        height: 90px;
+    }
+    .description.card.container {
+        padding: 1.5rem;
+    }
+    h2 {
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    img {
+        height: 75px;
+    }
+    .description.card.container {
+        padding: 1rem;
+    }
 }

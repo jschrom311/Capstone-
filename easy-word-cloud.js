@@ -65,4 +65,6 @@ window.makeWordCloud = function(data, parent_elem, svgscale, svg_class, font, ro
           }
           getRedditData(text[0][0].innerHTML);
         });
+
+        cloudLoading(false)
   }

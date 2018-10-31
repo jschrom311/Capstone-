@@ -248,3 +248,7 @@ footer {
         padding: 1rem;
     }
 }
+
+.description.card.container {
+    height: 450px;
+}

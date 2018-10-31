@@ -1,4 +1,4 @@
-# Reddit-Hot-Topic-Word-Cloud-Simulator
+# Reddit Word Cloud Generator
 Reddit Data Word Cloud
 https://jschrom311.github.io/Reddit-Hot-Topic-Word-Cloud-Simulator/
 

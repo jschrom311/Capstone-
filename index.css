@@ -177,6 +177,12 @@ footer {
     margin: auto;
 }
 
+@media screen and (max-width: 750px) {
+    img {
+        height: 200px;
+    }
+}
+
 @media screen and (max-width: 650px) {
     img {
         height: 175px;
